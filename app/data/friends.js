@@ -1,4 +1,4 @@
-var friendMatch = [
+var friends = [
   {
     name: "Claire Standish",
     photo:
