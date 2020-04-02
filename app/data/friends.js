@@ -30,4 +30,4 @@ var friends = [
   }
 ];
 
-module.exports = friendMatch;
+module.exports = friends;

@@ -10,7 +10,7 @@ module.exports = function(app){
     app.post("/api/friends", function (req,res){
         let newFriend = req.body;
 
-        for(let i = 0; i< newFriend.scores.length; i++){
+        for(var i = 0; i< newFriend.scores.length; i++){
             if (newFriend.scores[i] == "1 (Yes)"){
                 newFriend.scores[i] =1;
 
@@ -21,14 +21,14 @@ module.exports = function(app){
             }
         }
 
-        let compareArray = [];
+        var compareArray = [];
 
-        for (let i = 0; i< match.length; i++){
-            let compareFriend = match[i];
-            let difference = 0;
+        for (var i = 0; i< match.length; i++){
+            var compareFriend = match[i];
+            var difference = 0;
 
-            for (let j = 0; j< compareFriend.scores.length;j++){
-                let differenceScore = Math.abs(compareFriend.scores[j] - newFriend.scores[j]);
+            for (var j = 0; j< compareFriend.scores.length;j++){
+                var differenceScore = Math.abs(compareFriend.scores[j] - newFriend.scores[j]);
                 totalScore += differenceScore;
             }
         }
